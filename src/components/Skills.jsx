@@ -31,7 +31,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className={styles.skillsSection}>
+    <section id="skills" className={styles.skillsSection} data-aos="fade-up">
       <div className="container">
         <div className="text-center mb-5">
           <h2 className={`fw-bold ${styles.title}`}>Skills & Tech Stack</h2>

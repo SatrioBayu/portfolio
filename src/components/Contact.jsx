@@ -4,7 +4,7 @@ import { FiMail, FiLinkedin, FiGithub } from "react-icons/fi";
 
 const Contact = () => {
   return (
-    <section id="contact" className={styles.section}>
+    <section id="contact" className={styles.section} data-aos="fade-up">
       <div className="container text-center">
         <div className="mb-5">
           <h2 className={styles.title}>Get In Touch</h2>

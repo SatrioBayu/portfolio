@@ -34,7 +34,11 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className={styles.projectsSection}>
+    <section
+      id="projects"
+      className={styles.projectsSection}
+      data-aos="fade-up"
+    >
       <div className="container">
         <div className="text-center mb-5">
           <h2 className={`fw-bold ${styles.title}`}>Projects</h2>

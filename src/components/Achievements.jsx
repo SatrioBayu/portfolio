@@ -86,7 +86,7 @@ const Achievements = () => {
   ];
 
   return (
-    <section id="achievements" className={styles.section}>
+    <section id="achievements" className={styles.section} data-aos="fade-up">
       <div className="container text-center mb-5">
         <h2 className={`fw-bold ${styles.title}`}>
           Achievements & Certificates

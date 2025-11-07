@@ -3,7 +3,11 @@ import styles from "../styles/About.module.css";
 
 const About = () => {
   return (
-    <section id="about" className={`py-5 ${styles.aboutSection}`}>
+    <section
+      id="about"
+      className={`py-5 ${styles.aboutSection}`}
+      data-aos="fade-up"
+    >
       <div className="container">
         <div className="text-center mb-5">
           <h2 className={`fw-bold ${styles.aboutTitle}`}>About Me</h2>

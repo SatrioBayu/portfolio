@@ -58,7 +58,11 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className={styles.experienceSection}>
+    <section
+      id="experience"
+      className={styles.experienceSection}
+      data-aos="fade-up"
+    >
       <div className="container">
         <div className="text-center mb-5">
           <h2 className={`fw-bold ${styles.title}`}>Experience</h2>
