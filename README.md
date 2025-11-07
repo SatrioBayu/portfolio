@@ -1,16 +1,42 @@
-# React + Vite
+# Satrio Bayu Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio website! This project showcases my skills, projects, and professional experience in **IT Service Management, IT Governance, and Web Development**. Built using **React.js**, **Next.js**, **Bootstrap**, and **CSS Modules** with modern and elegant design principles.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Demo
 
-## React Compiler
+[Visit My Portfolio](#)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 💻 About This Project
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This portfolio website serves as a central hub to present my professional background, projects, achievements, and contact information. It features:
+
+- **Hero Section** with a professional introduction and call-to-action buttons.
+- **About Section** detailing my experience and technical skills.
+- **Skills Section** showcasing my technology stack.
+- **Projects Section** highlighting personal and professional web projects.
+- **Experience Section** with timeline of work and achievements.
+- **Achievements Section** with certificates in a modern carousel.
+- **Contact Section** with direct links to email, LinkedIn, and GitHub.
+
+**Design Highlights:**
+
+- Modern and clean layout using **glassmorphism** effects.
+- Fully responsive and mobile-friendly design.
+- Interactive animations powered by **AOS** for scroll-based effects.
+- Elegant and futuristic visual style.
+
+---
+
+## ⚙️ Technologies Used
+
+- **Frontend:** React.js, Next.js
+- **Styling:** Bootstrap, CSS Modules
+- **Animation:** AOS (Animate on Scroll)
+- **Icons:** react-icons
+- **Version Control:** Git & GitHub
+
+---
