@@ -1,0 +1,206 @@
+.section {
+  background-color: #ffffff;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 2.3rem;
+  color: #1a1a1a;
+}
+
+.subtitle {
+  color: #6c757d;
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+/* === Swiper styling === */
+.carousel {
+  padding-bottom: 60px;
+}
+
+/* === Card === */
+.card {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 123, 255, 0.15);
+}
+
+/* === Image === */
+.imageWrapper {
+  height: 200px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.08);
+}
+
+/* === Content === */
+.content {
+  padding: 25px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 5px;
+}
+
+.issuer {
+  color: #6c757d;
+  font-size: 0.95rem;
+  margin-bottom: 3px;
+}
+
+.year {
+  color: #007bff;
+  font-weight: 500;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+/* === Button === */
+.viewBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.viewBtn:hover {
+  background: linear-gradient(90deg, #005ecb, #00a8ff);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* === Swiper Navigation & Pagination === */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #007bff !important;
+  transition: color 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #005ecb !important;
+}
+
+.swiper-pagination-bullet {
+  background: #007bff !important;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* === Modal Styles === */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modalContent {
+  position: relative;
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  max-width: 700px;
+  width: 90%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: zoomIn 0.3s ease-in-out;
+}
+
+.modalImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.closeBtn:hover {
+  color: #007bff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,19 @@
+/* === Footer === */
+.footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+  text-align: center;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* === Footer === */
+.footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 0.95rem;
+  color: #777;
+}
+
+.footer strong {
+  color: #007bff;
+}

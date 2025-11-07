@@ -1,0 +1,78 @@
+.section {
+  background: linear-gradient(180deg, #f5faff 0%, #ffffff 100%);
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  color: #6c757d;
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+/* === Buttons / Social Links === */
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.contactSection {
+  background: linear-gradient(180deg, #ffffff 0%, #f5faff 100%);
+  padding: 80px 20px;
+}
+
+.contactBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 30px;
+  text-decoration: none;
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* === EMAIL BUTTON === */
+.email {
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+}
+.email:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.25);
+}
+
+/* === LINKEDIN BUTTON === */
+.linkedin {
+  background: linear-gradient(90deg, #0077b5, #00a0dc);
+}
+.linkedin:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 119, 181, 0.25);
+}
+
+/* === GITHUB BUTTON === */
+.github {
+  background: linear-gradient(90deg, #24292e, #3b3b3b);
+}
+.github:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(36, 41, 46, 0.25);
+}

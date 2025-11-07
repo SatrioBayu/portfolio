@@ -1,0 +1,124 @@
+.experienceSection {
+  background-color: #f8f9fa;
+  color: #1a1a1a;
+  padding: 90px 0;
+}
+
+.title {
+  font-size: 2.2rem;
+  color: #1a1a1a;
+}
+
+.subtitle {
+  color: #6c757d;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+/* === TIMELINE === */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 30px;
+  max-width: 800px;
+  border-left: 3px solid rgba(0, 123, 255, 0.2);
+}
+
+/* Dot on the line */
+.timelineDot {
+  position: absolute;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+}
+
+/* Each item */
+.timelineItem {
+  position: relative;
+  margin-bottom: 50px;
+  padding-left: 40px;
+}
+
+.timelineItem:last-child {
+  margin-bottom: 0;
+}
+
+/* Content card */
+.timelineContent {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.4s ease;
+}
+
+.timelineContent:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0, 123, 255, 0.15);
+}
+
+/* Typography */
+.year {
+  font-weight: 600;
+  color: #007bff;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.position {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.company {
+  color: #6c757d;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.achievementList {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.achievementList li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 8px;
+  color: #333;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.achievementList li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #007bff;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 20px;
+  }
+  .timelineItem {
+    padding-left: 30px;
+  }
+  .timelineDot {
+    width: 14px;
+    height: 14px;
+    left: -7px;
+  }
+}

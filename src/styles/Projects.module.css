@@ -1,0 +1,145 @@
+.projectsSection {
+  background-color: #ffffff;
+  padding: 90px 0;
+}
+
+.title {
+  font-size: 2.2rem;
+  color: #1a1a1a;
+}
+
+.subtitle {
+  color: #6c757d;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+/* === GRID === */
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 2rem;
+  align-items: stretch; /* 🔥 pastikan semua sama tinggi */
+}
+
+/* === CARD === */
+.projectCard {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  backdrop-filter: blur(16px);
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 450px; /* 🧭 menjaga tinggi minimum */
+}
+
+.projectCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 123, 255, 0.15);
+}
+
+/* === IMAGE WRAPPER === */
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.projectCard:hover .projectImage {
+  transform: scale(1.08);
+}
+
+/* Overlay untuk icon link */
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transition: all 0.4s ease;
+  gap: 1rem;
+}
+
+.projectCard:hover .overlay {
+  opacity: 1;
+}
+
+.iconBtn {
+  background: white;
+  color: #007bff;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-size: 1.25rem;
+}
+
+.iconBtn:hover {
+  background: #007bff;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* === BODY === */
+.cardBody {
+  padding: 25px;
+  flex: 1; /* 💪 isi menyesuaikan tinggi */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.projectTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.projectDesc {
+  color: #6c757d;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  flex: 1; /* memastikan deskripsi mengisi ruang tengah */
+}
+
+/* === TECH BADGES === */
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto; /* badges selalu di bagian bawah */
+}
+
+.techBadge {
+  background: rgba(0, 123, 255, 0.1);
+  border: 1px solid rgba(0, 123, 255, 0.3);
+  color: #0056d2;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.techBadge:hover {
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  color: #fff;
+  transform: translateY(-3px);
+}
