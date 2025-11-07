@@ -1,65 +1,81 @@
-// Experience.jsx
 import React from "react";
+import styles from "../styles/Experience.module.css";
 
 const Experience = () => {
   const experiences = [
     {
-      year: "2024 - Present",
-      position: "Frontend Developer",
-      company: "Freelance / Personal Projects",
+      year: "Jun 2024 - Jun 2025",
+      position: "ITSM Lead",
+      company: "PT. Astra Graphia Information Technology",
       achievements: [
-        "Developed several responsive websites using React.js and Bootstrap.",
-        "Collaborated with designers to improve UI/UX for client projects.",
-        "Implemented reusable components and optimized code performance.",
+        "Reviewed IT documentation (policies, guidelines, procedures) at least annually to maintain relevance with current processes and regulations.",
+        "Maintained 95% SLA Achievements for ticket related to client devices.",
+        "Ensure 100% maintenance is renewed on time to maintain business operations.",
+        "Reviewed IT documentation (policies, guidelines, procedures) at least annually to maintain relevance with current processes and regulations.",
+        "Support ISO/IEC 27001 surveillance audit and upgrade version from 2013 to 2022 with 0 findings, ensuring full compliance with information security standards.",
       ],
     },
     {
-      year: "2022 - 2024",
-      position: "Web Developer Intern",
-      company: "Tech Innovators Indonesia",
+      year: "Jun 2023 - Jun 2024",
+      position: "ITSM Officer",
+      company: "PT. Toyota Astra Motor",
       achievements: [
-        "Built internal dashboards for performance monitoring using JavaScript and REST APIs.",
-        "Worked closely with backend engineers to integrate API endpoints.",
-        "Learned Git workflow and version control in a team setting.",
+        "Established standards for client devices to ensure devices security.",
+        "Maintained 95% SLA Achievements for ticket related to client devices.",
+        "Ensure 100% maintenance is renewed on time to maintain business operations.",
+        "Ensure 100% of IT services that will be deployed in production have passed the release management process and completed project documentation.",
+        "Lead ISO 27001 Surveillance Audit with 0 findings.",
+        "Supported ISO 9001 External Audit with 1 OFI.",
+        "Lead as Project Manager to Implemented Freshservice to improve ticket management system.",
       ],
     },
     {
-      year: "2020 - 2022",
-      position: "Computer Science Student Projects",
-      company: "University Projects",
+      year: "May 2023 - Jun 2023",
+      position: "IT Support",
+      company: "CV Sinar Terang Sejahtera",
       achievements: [
-        "Created multiple academic projects, including a to-do app and landing page templates.",
-        "Introduced component-based UI structure using React.",
-        "Presented final-year project focused on improving UX in web-based learning apps.",
+        "Assist problem solving related to existing client devices such as Notebook and printer.",
+        "Assist with operational data transform before input it to the system.",
+      ],
+    },
+    {
+      year: "Feb 2023 - Mar 2023",
+      position: "Fullstack Web Developer Intern",
+      company: "PT. Sekawan Media Informatika",
+      achievements: [
+        "Developed and design UI Dashboard.",
+        "Consuming APIs and determining the optimal form of data presentation.",
+      ],
+    },
+    {
+      year: "2019 - 2023",
+      position: "Computer Science Student",
+      company: "Brawijaya University",
+      achievements: [
+        "UI/UX related thesis with the title 'Analisis Perbandingan Layout Form Single-Page dan Multi-Page dalam Pengisian Form Data Penduduk'.",
       ],
     },
   ];
 
   return (
-    <section id="experience" className="bg-light py-5">
+    <section id="experience" className={styles.experienceSection}>
       <div className="container">
         <div className="text-center mb-5">
-          <h2 className="fw-bold">Experience</h2>
-          <p className="text-muted">
+          <h2 className={`fw-bold ${styles.title}`}>Experience</h2>
+          <p className={styles.subtitle}>
             My career journey and key achievements over the years.
           </p>
         </div>
 
-        <div className="timeline position-relative border-start border-3 border-primary ps-4">
+        <div className={styles.timeline}>
           {experiences.map((exp, index) => (
-            <div className="mb-5 position-relative" key={index}>
-              <div
-                className="position-absolute top-0 start-0 translate-middle bg-primary rounded-circle"
-                style={{ width: "16px", height: "16px" }}
-              ></div>
-
-              <div className="ms-4">
-                <h5 className="fw-bold mb-1">{exp.position}</h5>
-                <p className="text-muted mb-1">{exp.company}</p>
-                <small className="text-secondary d-block mb-2">
-                  {exp.year}
-                </small>
-                <ul className="mb-0">
+            <div key={index} className={styles.timelineItem}>
+              <div className={styles.timelineDot}></div>
+              <div className={styles.timelineContent}>
+                <div className={styles.year}>{exp.year}</div>
+                <h5 className={styles.position}>{exp.position}</h5>
+                <p className={styles.company}>{exp.company}</p>
+                <ul className={styles.achievementList}>
                   {exp.achievements.map((item, i) => (
                     <li key={i}>{item}</li>
                   ))}

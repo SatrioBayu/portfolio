@@ -1,48 +1,50 @@
-// Contact.jsx
 import React from "react";
+import styles from "../styles/Contact.module.css";
+import { FiMail, FiLinkedin, FiGithub } from "react-icons/fi";
 
 const Contact = () => {
   return (
-    <section id="contact" className="bg-light py-5">
+    <section id="contact" className={styles.section}>
       <div className="container text-center">
         <div className="mb-5">
-          <h2 className="fw-bold">Get In Touch</h2>
-          <p className="text-muted">
+          <h2 className={styles.title}>Get In Touch</h2>
+          <p className={styles.subtitle}>
             I’m always open to discussing new projects, collaborations, or
-            opportunities to grow together.
+            opportunities to grow together. Feel free to reach out!
           </p>
         </div>
 
-        <div className="d-flex justify-content-center gap-3 mb-4 flex-wrap">
+        <div className={styles.socials}>
           <a
-            href="mailto:satriobayu@example.com"
-            className="btn btn-primary btn-lg"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=sbayu875@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${styles.contactBtn} ${styles.email}`}
           >
-            <i className="bi bi-envelope me-2"></i>Email Me
+            <FiMail className="me-2" />
+            Email Me
           </a>
+
           <a
-            href="https://www.linkedin.com/in/satriobayu"
+            href="https://www.linkedin.com/in/satrio-bayu"
             target="_blank"
             rel="noreferrer"
-            className="btn btn-outline-dark btn-lg"
+            className={`${styles.contactBtn} ${styles.linkedin}`}
           >
-            <i className="bi bi-linkedin me-2"></i>LinkedIn
+            <FiLinkedin className="me-2" />
+            LinkedIn
           </a>
+
           <a
-            href="https://github.com/satriobayu"
+            href="https://github.com/SatrioBayu"
             target="_blank"
             rel="noreferrer"
-            className="btn btn-outline-dark btn-lg"
+            className={`${styles.contactBtn} ${styles.github}`}
           >
-            <i className="bi bi-github me-2"></i>GitHub
+            <FiGithub className="me-2" />
+            GitHub
           </a>
         </div>
-
-        <footer className="pt-4 border-top mt-5">
-          <p className="mb-0 text-muted">
-            © {new Date().getFullYear()} Satrio Bayu. All rights reserved.
-          </p>
-        </footer>
       </div>
     </section>
   );

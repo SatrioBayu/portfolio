@@ -1,59 +1,177 @@
-// Achievements.jsx
-import React from "react";
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import styles from "../styles/Achievements.module.css";
+import { FiExternalLink, FiX } from "react-icons/fi";
 
 const Achievements = () => {
+  const [selectedCert, setSelectedCert] = useState(null);
+
   const achievements = [
     {
-      title: "React Developer Certificate",
-      issuer: "Dicoding Indonesia",
-      year: "2024",
+      title: "Python - Certification of Completion",
+      issuer: "Progate",
+      year: "2021",
       description:
-        "Completed an in-depth React Developer learning path focused on modern web application development.",
+        "Learn basic Python programming concepts including syntax, data structures, and functions.",
+      image: "/cert-basic-python.png",
     },
     {
-      title: "UI/UX Design Fundamentals",
-      issuer: "Coursera",
-      year: "2023",
+      title: "Python 101 for Data Science",
+      issuer: "Coginitiveclass",
+      year: "2021",
       description:
-        "Learned principles of user interface and user experience design with hands-on design projects.",
+        "Introduction to Python programming for data science applications.",
+      image: "/cert-python-ds.png",
     },
     {
-      title: "Web Development Bootcamp",
-      issuer: "Udemy",
+      title: "Fullstack Web Development Bootcamp Completion",
+      issuer: "Binar Academy",
       year: "2022",
       description:
-        "Covered HTML, CSS, JavaScript, and Bootstrap to build responsive websites from scratch.",
+        "Completed an in-depth Full Stack Web Development learning path.",
+      image: "/cert-fsw.png",
+    },
+    {
+      title: "The Most Progressive Student",
+      issuer: "Binar Academy",
+      year: "2022",
+      description:
+        "The Most Progressive Student in Binar Academy Bootcamp on Fullstack Web Development Wave 2.",
+      image: "/cert-fsw-prog.png",
+    },
+
+    {
+      title: "Digital Literacy",
+      issuer: "Komdigi",
+      year: "2025",
+      description:
+        "Fundamental skills and knowledge to navigate the digital world safely and effectively.",
+      image: "/cert-literasi-digital.png",
+    },
+    {
+      title: "Basic AI",
+      issuer: "Komdigi",
+      year: "2025",
+      description: "Introduction to Artificial Intelligence (AI) concepts.",
+      image: "/cert-basic-ai.png",
+    },
+    {
+      title: "Introduction to Cloud Computing",
+      issuer: "Komdigi",
+      year: "2025",
+      description:
+        "Fundamental concepts of cloud computing and its applications.",
+      image: "/cert-cloud.png",
+    },
+    {
+      title: "TOEFL Prediction Test",
+      issuer: "Komdigi",
+      year: "2025",
+      description:
+        "Achieved a score of 530 in the TOEFL Prediction Test, demonstrating English proficiency.",
+      image: "/toefl-prediction.png",
+    },
+    {
+      title: "Tips and Tricks to Avoid Phishing Attacks",
+      issuer: "Komdigi",
+      year: "2025",
+      description:
+        "Learn essential tips and tricks to identify and avoid phishing attacks, enhancing your online security.",
+      image: "/cert-phising.png",
     },
   ];
 
   return (
-    <section id="achievements" className="py-5">
-      <div className="container">
-        <div className="text-center mb-5">
-          <h2 className="fw-bold">Achievements & Certificates</h2>
-          <p className="text-muted">
-            Recognitions and certifications I’ve earned along my learning
-            journey.
-          </p>
-        </div>
+    <section id="achievements" className={styles.section}>
+      <div className="container text-center mb-5">
+        <h2 className={`fw-bold ${styles.title}`}>
+          Achievements & Certificates
+        </h2>
+        <p className={styles.subtitle}>
+          Recognitions and certifications I’ve earned along my learning journey.
+        </p>
+      </div>
 
-        <div className="row g-4">
+      <div className="container">
+        <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={40}
+          slidesPerView={1}
+          loop={true}
+          pagination={{ clickable: true }}
+          navigation
+          autoplay={{
+            delay: 4000,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            768: { slidesPerView: 2 },
+            1200: { slidesPerView: 3 },
+          }}
+          className={styles.carousel}
+        >
           {achievements.map((item, index) => (
-            <div className="col-md-4" key={index}>
-              <div className="card h-100 shadow-sm border-0">
-                <div className="card-body">
-                  <h5 className="fw-bold mb-2">{item.title}</h5>
-                  <h6 className="text-muted mb-1">{item.issuer}</h6>
-                  <small className="text-secondary d-block mb-3">
-                    {item.year}
-                  </small>
-                  <p className="text-muted">{item.description}</p>
+            <SwiperSlide key={index}>
+              <div className={styles.card}>
+                <div className={styles.imageWrapper}>
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className={styles.image}
+                  />
+                </div>
+                <div className={styles.content}>
+                  <h5 className={styles.cardTitle}>{item.title}</h5>
+                  <p className={styles.issuer}>{item.issuer}</p>
+                  <small className={styles.year}>{item.year}</small>
+                  <p className={styles.description}>{item.description}</p>
+                  <button
+                    className={styles.viewBtn}
+                    onClick={() => setSelectedCert(item)}
+                  >
+                    <FiExternalLink className="me-2" /> View Certificate
+                  </button>
                 </div>
               </div>
-            </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
+
+      {/* === Modal Certificate === */}
+      {selectedCert && (
+        <div
+          className={styles.modalOverlay}
+          onClick={() => setSelectedCert(null)}
+        >
+          <div
+            className={styles.modalContent}
+            onClick={(e) => e.stopPropagation()} // biar klik dalam modal tidak close
+          >
+            <button
+              className={styles.closeBtn}
+              onClick={() => setSelectedCert(null)}
+            >
+              <FiX size={22} />
+            </button>
+            <img
+              src={selectedCert.image}
+              alt={selectedCert.title}
+              className={styles.modalImage}
+            />
+            <div className="mt-3 text-center">
+              <h5>{selectedCert.title}</h5>
+              <p className="text-muted mb-0">
+                {selectedCert.issuer} — {selectedCert.year}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

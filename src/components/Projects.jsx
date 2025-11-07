@@ -1,83 +1,87 @@
 import React from "react";
+import styles from "../styles/Projects.module.css";
+import { FiExternalLink, FiGithub } from "react-icons/fi";
 
-function Projects() {
+const Projects = () => {
   const projects = [
     {
       title: "Personal Portfolio Website",
       description:
         "A responsive personal website built with React.js and Bootstrap to showcase my projects and experiences.",
       tech: ["React.js", "Bootstrap", "JavaScript"],
-      image: "/project1.jpg",
+      image: "/project-portfolio.png",
       demo: "#",
       repo: "#",
     },
     {
-      title: "Task Manager App",
+      title: "Sistem Persediaan Barang PTTUN Makassar",
       description:
-        "A simple task management web app allowing users to add, edit, and organize tasks efficiently.",
-      tech: ["React.js", "LocalStorage", "CSS3"],
-      image: "/project2.jpg",
-      demo: "#",
+        "A web-based inventory management system developed for PTTUN Makassar.",
+      tech: ["React.js", "Express", "Node.js", "PostgreSQL"],
+      image: "/project-istock.png",
+      demo: "https://istock.pttun-makassar.go.id",
       repo: "#",
     },
     {
-      title: "Landing Page Redesign",
+      title: "Duck Hunt",
       description:
-        "A clean and modern landing page redesign for a local business to improve user engagement.",
-      tech: ["HTML5", "Bootstrap", "Figma"],
-      image: "/project3.jpg",
-      demo: "#",
-      repo: "#",
+        "A simple web-based duck hunt game inspired by the classic arcade game.",
+      tech: ["HTML5", "CSS", "Javascript"],
+      image: "/project-duck.png",
+      demo: "https://satriobayu.github.io/",
+      repo: "https://github.com/SatrioBayu/SatrioBayu.github.io",
     },
   ];
+
   return (
-    <section id="projects" className="py-5">
+    <section id="projects" className={styles.projectsSection}>
       <div className="container">
         <div className="text-center mb-5">
-          <h2 className="fw-bold">Projects</h2>
-          <p className="text-muted">
+          <h2 className={`fw-bold ${styles.title}`}>Projects</h2>
+          <p className={styles.subtitle}>
             Some of the projects I’ve built and worked on recently.
           </p>
         </div>
 
-        <div className="row g-4">
+        <div className={styles.projectGrid}>
           {projects.map((project, index) => (
-            <div className="col-md-4" key={index}>
-              <div className="card h-100 shadow-sm border-0">
+            <div key={index} className={styles.projectCard}>
+              <div className={styles.imageWrapper}>
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="card-img-top"
-                  style={{ height: "200px", objectFit: "cover" }}
+                  className={styles.projectImage}
                 />
-                <div className="card-body">
-                  <h5 className="fw-bold">{project.title}</h5>
-                  <p className="text-muted">{project.description}</p>
-                  <div className="d-flex flex-wrap gap-2 mb-3">
-                    {project.tech.map((t, i) => (
-                      <span key={i} className="badge bg-secondary">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="d-flex justify-content-between">
-                    <a
-                      href={project.demo}
-                      className="btn btn-sm btn-primary"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      View Demo
-                    </a>
-                    <a
-                      href={project.repo}
-                      className="btn btn-sm btn-outline-dark"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      GitHub Repo
-                    </a>
-                  </div>
+                <div className={styles.overlay}>
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.iconBtn}
+                  >
+                    <FiExternalLink />
+                  </a>
+                  <a
+                    href={project.repo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles.iconBtn}
+                  >
+                    <FiGithub />
+                  </a>
+                </div>
+              </div>
+
+              <div className={styles.cardBody}>
+                <h5 className={styles.projectTitle}>{project.title}</h5>
+                <p className={styles.projectDesc}>{project.description}</p>
+
+                <div className={styles.techList}>
+                  {project.tech.map((t, i) => (
+                    <span key={i} className={styles.techBadge}>
+                      {t}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
@@ -86,6 +90,6 @@ function Projects() {
       </div>
     </section>
   );
-}
+};
 
 export default Projects;
