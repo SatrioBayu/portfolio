@@ -10,8 +10,8 @@ const Projects = () => {
         "A responsive personal website built with React.js and Bootstrap to showcase my projects and experiences.",
       tech: ["React.js", "Bootstrap", "JavaScript"],
       image: "/project-portfolio.png",
-      demo: "#",
-      repo: "#",
+      demo: "https://satriobayudev.netlify.app/",
+      repo: "https://github.com/SatrioBayu/portfolio",
     },
     {
       title: "Sistem Persediaan Barang PTTUN Makassar",
@@ -20,7 +20,7 @@ const Projects = () => {
       tech: ["React.js", "Express", "Node.js", "PostgreSQL"],
       image: "/project-istock.png",
       demo: "https://istock.pttun-makassar.go.id",
-      repo: "#",
+      repo: "https://github.com/SatrioBayu/iStock",
     },
     {
       title: "Duck Hunt",
