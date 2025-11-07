@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import React from "react";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -10,6 +13,11 @@ import Footer from "./components/Footer";
 import "./styles/index.css";
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 800, // durasi animasi
+    });
+  }, []);
   return (
     <>
       <Hero />
